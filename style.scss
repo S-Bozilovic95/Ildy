@@ -1,0 +1,358 @@
+// GOOGLE FONTS
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+
+// VARIABLES
+
+$bodyFont:'Montserrat', sans-serif;
+$transition: .4 ease;
+$padding:50px 0px;
+$white: #fff;
+$yellow: #f1d204;
+$purple:#6a4d8a;
+$gray:#444;
+$red:rgb(241, 139, 109);
+$background:#222f36;
+$gray1:rgb(232, 232, 232);
+$footer:#292825;
+
+
+// DEFAULT STYLES
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: $bodyFont;
+    line-height: 1.5;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Poppins', sans-serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+@keyframes animacija{
+    from{
+        color: $purple;
+    }
+
+    to{
+        color: $yellow;
+    }
+}
+
+
+// HEADER
+
+header{
+    
+    background-image: url(img/front-page-header.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+
+    nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15px 0px;
+        flex-wrap: wrap;
+        
+        ul{
+            display: flex;
+            li{
+                padding: 0px 20px;
+               
+                a{
+                    color: $white;
+                    font-weight: 300;
+                    text-transform: uppercase;
+
+                    &:hover{
+                       color: $yellow;
+                       transition: $transition;
+                    }
+                }
+            }
+        }
+    }
+
+    hgroup{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 80vh;
+
+        h1{
+            color:$yellow;
+            font-size: 5rem;
+
+            animation-name: animacija;
+            animation-duration: 5s;
+            animation-fill-mode: forwards;
+
+            span{
+                color: $yellow;
+            }
+        }
+
+        .btngroup{
+            padding: $padding;
+            
+            .btn1{
+              color: $white;
+              border: 1px solid $white;
+              background-color: $gray;
+              padding: 15px 30px;
+              font-size: 1.2rem;
+              margin-right: 20px;
+
+              &:hover{
+                  background-color: $purple;
+                  cursor: pointer;
+                  transition: $transition;
+                }
+            }
+
+            .btn2{
+              color: $white;
+              border: 1px solid $white;
+              background-color: $yellow;
+              padding: 15px 30px;
+              font-size: 1.2rem;
+
+              &:hover{
+                background-color: $purple;
+                cursor: pointer;
+                transition: $transition;
+                }
+            } 
+        }
+    }
+}
+
+
+
+// PROJECTS
+
+
+.projects{
+    padding: $padding;
+    text-align: center;
+    color: black;
+
+    h3{
+        margin-bottom: 20px;
+        font-size: 2.5rem;
+    }
+
+    .row{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        width: 100%;
+        height: 400px;
+        margin-top: 30px;
+
+        article{
+
+            &:nth-child(1){
+                background-image: url(img/front-page-project-1.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            &:nth-child(2){
+                background-image: url(img/front-page-project-2.jpg);
+                background-position: center;
+                background-size: cover;
+            }
+            &:nth-child(3){
+                background-image: url(img/front-page-project-1.png);
+                background-position: center;
+                background-size: cover;
+            }
+            &:nth-child(4){
+                background-image: url(img/front-page-project-2.png);
+                background-position: center;
+                background-size: cover;
+            }
+
+            &:hover{
+                transform: scale(1.1);
+                transition-duration:1s;
+            }
+        }
+    }
+}
+
+// SERVICES
+
+
+.services{
+    padding: $padding;
+    text-align: center;
+
+    h3{
+        margin-bottom: 20px;
+        font-size: 2.5rem;
+        color: black;
+    }
+
+
+    .row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 20px;
+
+        article{
+            flex: 0 0 30%;
+
+            h4{
+                font-size: 2rem;
+                color: $yellow;
+            }
+
+            i{
+                font-size: 2rem;
+                color: $red;
+            }
+        }
+    }
+}
+
+// NEWS
+
+.news{
+    padding: $padding;
+    text-align: center;
+    background-color: $background;
+    color: $white;
+
+    h3{
+        margin-bottom: 20px;
+        font-size: 2.5rem;
+    }
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 40px;
+
+        article{
+            flex: 0 0 30%;
+
+            img{
+                width: 100%;
+                height: 40vh;
+            }
+
+            hgroup{
+                background-color: $white;
+                padding: 20px 25px;
+
+                h4{
+                    font-size: 1.5rem;
+                    color: $gray;
+                    margin-bottom: 20px;
+                }
+
+                p{
+                    color: black;
+                }
+            }
+
+            &:hover{
+                transform: rotateY(360deg);
+                transition-duration: 2s;
+            }
+
+        }
+    }
+
+}
+
+
+// NEWS
+
+.team{
+    padding: $padding;
+    text-align: center;
+    
+    h3{
+        margin-bottom: 20px;
+        font-size: 2.5rem;
+    }
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 40px;
+
+        article{
+            flex: 0 0 30%;
+
+            h4{
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+
+            p{
+                color: $purple;
+            }
+
+            i{
+                font-size: 2rem;
+                margin:20px 15px 0px 15px;
+                color: $yellow;
+            }
+        }
+    }
+}
+
+
+
+// FOOTER
+
+footer{
+    padding: $padding;
+    color: $white;
+    background-color: $footer;
+    text-align: center;
+    
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        article{
+            flex: 0 0 30%;
+        }
+
+    }
+
+}
